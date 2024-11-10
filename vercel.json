@@ -1,11 +1,9 @@
 {
     "version": 2,
-    "builds": [
-      {
-        "src": "main.py",
-        "use": "@vercel/python"
-      }
-    ],
+      "builds": [
+    { "src": "Dockerfile", 
+        "use": "@vercel/docker" }
+  ],
     "env": {
     "PYTHON_VERSION": "3.10.13"
   },

@@ -296,4 +296,9 @@ async def predict(file: UploadFile = File(..., media_type="image/*")):
         return {"hair_type": hair_type, "suggestions": suggestions}
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
+
         
